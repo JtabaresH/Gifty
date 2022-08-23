@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import getGifs from '../services/getGifs'
-import Gif from './Gif'
-import './Gif.css'
+import getGifs from '../../services/getGifs'
+import Gif from '../Gif'
+import Spinner from '../Spinner'
 
 export default function ListOfGifs({ params }) {
     const { keyword } = params
@@ -18,7 +18,7 @@ export default function ListOfGifs({ params }) {
             })
     }, [keyword])
 
-    if(loading) return (<div className="lds-ripple"><div></div><div></div></div>)
+    if(loading) return <Spinner />
 
     return (
         <div>

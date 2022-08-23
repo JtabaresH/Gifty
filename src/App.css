@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+.App-logo {
+  margin: 10px auto;
+  padding: 20px 0;
+  width: 144px;
+  cursor: pointer;
+}
+
+.App-logo img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.App-title {
+  color: var(--theme-body-txt);
+  margin-top: 0.6rem;
+}
+
 .App-content {
   background-color: #282c34;
   min-height: 100vh;
@@ -12,6 +29,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 16px;
+}
+
+.Link-list {
+  text-decoration: none;
 }
 
 button{

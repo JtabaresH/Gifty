@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import './App.css'
-import ListOfGifs from './components/ListOfGifs'
 import { Link, Route } from 'wouter'
+import ListOfGifs from './components/ListOfGifs'
+import Home from './pages/Home';
+import Detail from './pages/Detail';
+import logo from './logo.png'
+import './App.css'
 
 export default function App() {
   const [keyword, setKeyword] = useState('mapache')
@@ -9,12 +12,20 @@ export default function App() {
   return (
     <div className="App">
       <section className="App-content">
-        <Link to="/gif/panda">Gifs de pandas</Link>
-        <Link to="/gif/mapache">Gifs de mapaches</Link>
-        <Link to="/gif/tigre">Gifs de tigres</Link>
+        <Link to="/">
+          <img className="App-logo" src={logo} alt="Gifty logo" />
+        </Link>
         <Route
-          path='/gif/:keyword'
+          path='/'
+          component={Home}
+        />
+        <Route
+          path='/search/:keyword'
           component={ListOfGifs}
+        />
+        <Route
+          path='/gif/:id'
+          component={Detail}
         />
       </section>
     </div>
