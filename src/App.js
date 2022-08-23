@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link, Route } from 'wouter'
-import ListOfGifs from './components/ListOfGifs'
 import Home from './pages/Home';
 import Detail from './pages/Detail';
+import SearchResult from './pages/SearchResult';
 import logo from './logo.png'
 import './App.css'
 
@@ -21,7 +21,7 @@ export default function App() {
         />
         <Route
           path='/search/:keyword'
-          component={ListOfGifs}
+          component={SearchResult}
         />
         <Route
           path='/gif/:id'
